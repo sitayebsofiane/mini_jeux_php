@@ -9,6 +9,7 @@ if ( isset($_POST['salaire']) AND isset($_POST['date']) AND isset($_POST['verbe'
         $salaire = $salaire -18*$salaire/100;
         $age = $_POST['date'];
         $age = substr($age, 0,4);
+        $age= (date('Y')-$age)." ans";
         $verbe = $_POST['verbe'];
         $taille = strlen($verbe);
         $verbe = substr($verbe, 0, $taille-2); 
@@ -54,7 +55,7 @@ if ( isset($_POST['salaire']) AND isset($_POST['date']) AND isset($_POST['verbe'
         
         </div>
       </form>
-                            <h1>age:  <?php echo date('Y')-$age," ans"; ?> </h1>
+                            <h1>age:  <?php echo $age; ?> </h1>
                             <h1>salaire net: <?php echo $salaire," €"; ?></h1>
                             <table class="table table-bordered">
                                 <caption>si-tayeb sofiane</caption>
