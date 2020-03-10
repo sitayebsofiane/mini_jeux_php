@@ -6,7 +6,7 @@ $taille=0;
 if ( isset($_POST['salaire']) AND isset($_POST['date']) AND isset($_POST['verbe'])) // On a le nom et le prénom
 {
 	$salaire = $_POST['salaire'];
-        $salaire = $salaire -18*$salaire/100;
+        $salaire = $salaire*0.82;
         $age = $_POST['date'];
         $age = substr($age, 0,4);
         $age= (date('Y')-$age)." ans";
@@ -61,27 +61,27 @@ if ( isset($_POST['salaire']) AND isset($_POST['date']) AND isset($_POST['verbe'
                                 <caption>si-tayeb sofiane</caption>
                                 <tr>
                                     <th>je</th>
-                                    <td><?php echo $verbe."e"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."e";?></td>
                                 </tr>
                                 <tr>
                                     <th>tu</th>
-                                    <td><?php echo $verbe."es"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."es"; ?></td>
                                 </tr>
                                  <tr>
                                     <th>il/elle</th>
-                                    <td><?php echo $verbe."e"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."e"; ?></td>
                                 </tr>
                                  <tr>
                                     <th>nous</th>
-                                    <td><?php echo $verbe."ons"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."ons"; ?></td>
                                 </tr>
                                  <tr>
                                     <th>vous</th>
-                                    <td><?php echo $verbe."ez"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."ez"; ?></td>
                                 </tr>
                                  <tr>
                                     <th>ils/elles</th>
-                                    <td><?php echo $verbe."ent"; ?></td>
+                                    <td><?php echo empty($verbe)?'':$verbe."ent"; ?></td>
                                 </tr>
                             </table>
                         </div>
